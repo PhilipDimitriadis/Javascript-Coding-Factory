@@ -12,6 +12,11 @@ const getIndexes = (arr, val) => {
     }
   })
 
+  // arr.forEach(function(v, index) {
+  //     if (v === val) {
+  //       indexes.push(index)
+  //     }
+  // })
   return indexes
 }
 
