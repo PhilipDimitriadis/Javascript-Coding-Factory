@@ -1,8 +1,8 @@
 const students = ["Alice", "Andreas", "Bob", "Costas"]
 
-// students.forEach(function (stu, _, arr) {
-//   console.log(stu, arr)
-// })
+students.forEach(function (val, _, arr) {
+  console.log(val, arr)
+})
 
 let filtered = students.filter(student => student === "Andreas")
 console.log(filtered)
