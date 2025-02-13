@@ -2,6 +2,7 @@ let bag = new Set();
 
 bag.add('Oranges')
 bag.add('Apples')
+bag.delete('Apples')
 
 if (bag.has('Apples')) console.log('Has Apples')
 
