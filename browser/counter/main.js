@@ -11,6 +11,7 @@ window.addEventListener('DOMContentLoaded', function () {
  * Handler - Controller
  */
 function onDecreaseClicked() {
+  // Validate
   decreaseCounter()
 }
 
