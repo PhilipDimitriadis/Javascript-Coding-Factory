@@ -20,9 +20,6 @@ function updateBg() {
 }
 
 function getBgColor() {
-  // const colors = ['black', 'red', 'green', 'white', 'blue']
-  // return colors[Math.floor(Math.random() * colors.length)]
-
   const letters = ['A', 'B', 'C', 'D', 'E', 'F']
   const digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
   const hex = [...letters, ...digits]
