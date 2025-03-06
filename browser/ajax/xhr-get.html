@@ -8,18 +8,19 @@
 </head>
 
 <body>
-  <h1>XMLHttpRequest Get Request</h1>
+  <h1>XMLHttpRequest GET Request</h1>
   <button type="button" onclick="fetchOneObj()">Fetch One Object</button>
   <p id="responseText"></p>
 
   <script>
+
     function fetchOneObj() {
       const xhr = new XMLHttpRequest();
 
       xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/1', true);
 
       xhr.onreadystatechange = function () {
-        if (xhr.status === 4) {
+        if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             handleResponse(JSON.parse(xhr.responseText))
           } else {
@@ -32,16 +33,17 @@
     }
 
     function handleResponse(response) {
-      documnet.getElementById('responseText').innerHTML = `<b>Title</b>: ${response.title}
-                                                                          <br> <b>Body</b>: ${response.body}`
+      document.getElementById('responseText').innerHTML = `<b>Title</b>: ${response.title}
+                                                           <br> 
+                                                           <b>Body</b>: ${response.body}`
     }
 
     function showError(statusText) {
       document.getElementById('responseText').innerText = `Error: ${statusText}`
     }
 
-  </script>
 
+  </script>
 
 </body>
 
