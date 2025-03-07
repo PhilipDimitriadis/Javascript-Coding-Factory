@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async Await with Axios POST</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.8.1/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <button id="button">Click me to get data</button>
+  <p id="output"></p>
+
+  <script>
+
+    document.getElementById("button").addEventListener('click', async () => {
+      try {
+
+        const postData = {
+          title: 'Coding',
+          body: 'Coding Factory',
+          userId: 1
+        }
+
+        let response = await axios.post('https://jsonplaceholder.typicode.com/posts', postData);
+
+        document.getElementById('output').innerHTML = `<b>Id:</b> ${response.data.id}
+                                                        <b>Title:</b> ${response.data.title} 
+                                                        <br>
+                                                        ${response.data.body}`
+      } catch (error) {
+        console.error('Fetch error', error)
+        document.getElementById('output').innerHTML = 'Error fetching data.'
+      }
+    })
+
+
+  </script>
+</body>
+
+</html>
